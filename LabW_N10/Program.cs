@@ -1,0 +1,131 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace LabW_N10
+{
+    static class Program
+    {
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainForm());
+        }
+
+        static public int Number = 0;
+    }
+    public static class SM
+    {
+        public static List<double[]> ReturnPoints(int Number)
+        {
+            List<double[]> Points = new List<double[]>();
+            double a, b;
+            int n;
+            switch (Number)
+            {
+                case 1:
+                    a = -Math.PI;
+                    b = Math.PI;
+                    n = 50;
+                    for (double i = a; i <= b; i+=(b-a)/n)
+                    {
+                        double[] point = new Double[2];
+                        point[0] = i*15;
+                        point[1] = (2 * Math.Sin(i) + Math.Sin(2 * i))*15;
+                        Points.Add(point);
+                    }
+                    break;
+                case 2:
+                    a = 0.0;
+                    b = 3 * Math.PI;
+                    n = 20;
+                    for (double i = a; i < b; i+=(b-a)/n)
+                    {
+                        double[] point = new Double[2];
+                        point[0] = i*5;
+                        point[1] = (i * Math.Sin(i)*5);
+                        Points.Add(point);
+                    }
+                    break;
+                case 3:
+                    a = -2 * Math.PI;
+                    b = 2 * Math.PI;
+                    n = 40;
+                    for (double i = a; i < b; i+=(b-a)/n)
+                    {
+                        double[] point = new Double[2];
+                        point[0] = (float)i*5;
+                        point[1] = (float)((Math.Sin(i) + 0.5 * i * i))*5;
+                        Points.Add(point);
+                    }
+                    break;
+                case 4:
+                    a = 0.0;
+                    b = 4 * Math.PI;
+                    n = 40;
+                    for (double i = a; i < b; i+=(b-a)/n)
+                    {
+                        double[] point = new Double[2];
+                        point[0] = (float)i;
+                        point[1] = (float)(3 * Math.Sin(i) / i);
+                        Points.Add(point);
+                    }
+                    break;
+                case 5:
+                    a = -10.0;
+                    b = 10.0;
+                    n = 20;
+                    for (double i = a; i <= b; i+=(b-a)/n)
+                    {
+                        double[] point = new Double[2];
+                        point[0] = (float)i;
+                        point[1] = (float)(i*i - 18*i+72);
+                        Points.Add(point);
+                    }
+                    break;
+                case 6:
+                    a = 1.0;
+                    b = 10.0;
+                    n = 40;
+                    for (double i = a; i <= b; i+=(b-a)/n)
+                    {
+                        double[] point = new Double[2];
+                        point[0] = (float)i;
+                        point[1] = (float)(i * i * i + 5 * i * i + 14 * i);
+                        Points.Add(point);
+                    }
+                    break;
+                case 7:
+                    a = 0.5;
+                    b = 1.0;
+                    n = 20;
+                    for (double i = a; i <= b; i+=(b-a)/n)
+                    {
+                        double[] point = new Double[2];
+                        point[0] = (float)i*18;
+                        point[1] = (float)(Math.Sqrt(i+1)-1.0/i)*18;
+                        Points.Add(point);
+                    }
+                    break;
+                case 8:
+                    a = 0.5;
+                    b = 1.0;
+                    n = 20;
+                    for (double i = a; i <= b; i+=(b-a)/n)
+                    {
+                        double[] point = new Double[2];
+                        point[0] = (float)i;
+                        point[1] = (float)(Math.Sqrt(i+1)-1.0/i);
+                        Points.Add(point);
+                    }
+                    break;
+            }
+            return Points; 
+
+        }
+    }
+}

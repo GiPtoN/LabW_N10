@@ -1,0 +1,15 @@
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\bin\Debug\LabW_N10.exe.config
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\bin\Debug\LabW_N10.exe
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\bin\Debug\LabW_N10.pdb
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\obj\Debug\LabW_N10.csproj.AssemblyReference.cache
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\obj\Debug\LabW_N10.csproj.SuggestedBindingRedirects.cache
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\obj\Debug\LabW_N10.Properties.Resources.resources
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\obj\Debug\LabW_N10.csproj.GenerateResource.cache
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\obj\Debug\LabW_N10.csproj.CoreCompileInputs.cache
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\obj\Debug\LabW_N10.exe
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\obj\Debug\LabW_N10.pdb
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\obj\Debug\LabW_N10.Form01_01.resources
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\obj\Debug\LabW_N10.Form01_08.resources
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\obj\Debug\LabW_N10.MainForm.resources
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\obj\Debug\LabW_N10.Form02_01.resources
+C:\Users\golol\Desktop\ВУЗ\C#\ПИА\LabW_N10\LabW_N10\obj\Debug\LabW_N10.Form03_06.resources
