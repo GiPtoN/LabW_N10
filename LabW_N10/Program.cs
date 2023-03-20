@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace LabW_N10
 {
-    static class Program
+    internal static class Program
     {
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -67,11 +67,11 @@ namespace LabW_N10
                     a = 0.0;
                     b = 4 * Math.PI;
                     n = 40;
-                    for (double i = a; i < b; i+=(b-a)/n)
+                    for (double i = (b-a)/n; i < b; i+=(b-a)/n)
                     {
                         double[] point = new Double[2];
-                        point[0] = (float)i;
-                        point[1] = (float)(3 * Math.Sin(i) / i);
+                        point[0] = (float)i*5;
+                        point[1] = (float)(3 * Math.Sin(i) / i)*5;
                         Points.Add(point);
                     }
                     break;

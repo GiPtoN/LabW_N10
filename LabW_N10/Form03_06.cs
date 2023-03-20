@@ -9,11 +9,6 @@ namespace LabW_N10
         {
             InitializeComponent();
         }
-
-        private int LeftLimit;
-        private int RightLimit;
-        private int TargetNumber;
-        
         private void button1_Click(object sender, EventArgs e)
         {
             Form MainForm = Application.OpenForms[0];

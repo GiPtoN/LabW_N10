@@ -57,7 +57,7 @@ namespace LabW_N10
             form0306.Left = this.Left; 
             form0306.Top = this.Top; 
             form0306.Show(); 
-            this.Hide();        }
-        
+            this.Hide();        
+        }
     }
 }
