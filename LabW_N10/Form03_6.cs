@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace LabW_N10
@@ -8,6 +9,11 @@ namespace LabW_N10
         public Form03_6()
         {
             InitializeComponent();
+        }
+        private void Form03_6_Load(object sender, EventArgs e) 
+        { 
+            SupportMethodsForNumber03_6.PlayerOnePoints = 0; 
+            SupportMethodsForNumber03_6.PlayerOnePoints = 0;
         }
         private void EndGame()
         {
@@ -23,6 +29,7 @@ namespace LabW_N10
         {
             SupportMethodsForNumber03_6.PlayerOnePoints = 0;
             SupportMethodsForNumber03_6.PlayerPcPoints = 0;
+            Pl1ProgresBar.Value = SupportMethodsForNumber03_6.PlayerOnePoints;
             Pl1Score.Text= "0";
             Pl2Score.Text= "0";
         }
@@ -43,26 +50,21 @@ namespace LabW_N10
             MainForm.Show();
             this.Close();        
         }
-
-        private void Form03_6_Load(object sender, EventArgs e)
-        {
-            SupportMethodsForNumber03_6.PlayerOnePoints = 0;
-            SupportMethodsForNumber03_6.PlayerOnePoints = 0;
-        }
         private void SetNumbersButton_Click(object sender, EventArgs e)
         {
             SupportMethodsForNumber03_6.MinPoint = int.Parse(MinPointBox.Text);
             SupportMethodsForNumber03_6.MaxPoint = int.Parse(MaxPointBox.Text);
-            SupportMethodsForNumber03_6.TargetCount = int.Parse(TargetScoreBox.Text);          
+            SupportMethodsForNumber03_6.TargetCount = int.Parse(TargetScoreBox.Text);
+            Pl1ProgresBar.Maximum = SupportMethodsForNumber03_6.TargetCount;
         }
         private void StartNewGameButton_Click(object sender, EventArgs e)
         {
             StartNewGame();
         }
-        
         private void GetMoreButton_Click(object sender, EventArgs e)
         {
             SupportMethodsForNumber03_6.PlusPoint(ref SupportMethodsForNumber03_6.PlayerOnePoints);
+            Pl1ProgresBar.Value = SupportMethodsForNumber03_6.PlayerOnePoints;
             Pl1Score.Text = $"{SupportMethodsForNumber03_6.PlayerOnePoints}";
             if (SupportMethodsForNumber03_6.PlayerOnePoints > SupportMethodsForNumber03_6.TargetCount)
             {
@@ -71,13 +73,11 @@ namespace LabW_N10
                 GameEnded(false);
             }
         }
-
         private void StopButton_Click(object sender, EventArgs e)
         {
             EndGame();        
         }
     }
-    
     public class SupportMethodsForNumber03_6
     {
         public static Random RandomPoint = new Random();
