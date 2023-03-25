@@ -47,12 +47,12 @@ namespace LabW_N10
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Program.Number = int.Parse(comboBox1.SelectedItem.ToString());
+            SupportMethods.NumberGraphicsForLevel2 = int.Parse(comboBox1.SelectedItem.ToString());
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form form0306 = new Form03_06(); 
+            Form form0306 = new Form03_6(); 
             form0306.StartPosition = FormStartPosition.Manual; 
             form0306.Left = this.Left; 
             form0306.Top = this.Top; 

@@ -15,11 +15,10 @@ namespace LabW_N10
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
         }
-
-        static public int Number = 0;
     }
-    public static class SM
+    public class SupportMethods
     {
+        static public int NumberGraphicsForLevel2 = 0;
         public static List<double[]> ReturnPoints(int Number)
         {
             List<double[]> Points = new List<double[]>();
@@ -106,20 +105,8 @@ namespace LabW_N10
                     for (double i = a; i <= b; i+=(b-a)/n)
                     {
                         double[] point = new Double[2];
-                        point[0] = (float)i*18;
-                        point[1] = (float)(Math.Sqrt(i+1)-1.0/i)*18;
-                        Points.Add(point);
-                    }
-                    break;
-                case 8:
-                    a = 0.5;
-                    b = 1.0;
-                    n = 20;
-                    for (double i = a; i <= b; i+=(b-a)/n)
-                    {
-                        double[] point = new Double[2];
-                        point[0] = (float)i;
-                        point[1] = (float)(Math.Sqrt(i+1)-1.0/i);
+                        point[0] = (float)i*30;
+                        point[1] = (float)(Math.Sqrt(i+1)-1.0/i)*30;
                         Points.Add(point);
                     }
                     break;
@@ -127,5 +114,13 @@ namespace LabW_N10
             return Points; 
 
         }
+        
+    }
+}
+namespace Level3
+{
+    internal static class Program
+    {
+        
     }
 }

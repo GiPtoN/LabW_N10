@@ -22,7 +22,7 @@ namespace LabW_N10
             int x, y;
             graphics.DrawLine(new Pen(Color.Gray, 1f), -300,0,300,0);
             graphics.DrawLine(new Pen(Color.Gray, 1f), 0,-300,0,300);
-            Points = LabW_N10.SM.ReturnPoints(Program.Number);
+            Points = LabW_N10.SupportMethods.ReturnPoints(SupportMethods.NumberGraphicsForLevel2);
             foreach (var point in Points)
             {
                 graphics.DrawEllipse(new Pen(Color.Blue, 2f), ((float)point[0]*5), -((float)point[1]), 1, 1);
