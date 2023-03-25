@@ -117,10 +117,3 @@ namespace LabW_N10
         
     }
 }
-namespace Level3
-{
-    internal static class Program
-    {
-        
-    }
-}
