@@ -64,7 +64,7 @@ namespace LabW_N10
         private void GetMoreButton_Click(object sender, EventArgs e)
         {
             SupportMethodsForNumber03_6.PlusPoint(ref SupportMethodsForNumber03_6.PlayerOnePoints);
-            Pl1ProgresBar.Value = SupportMethodsForNumber03_6.PlayerOnePoints;
+            if(SupportMethodsForNumber03_6.PlayerOnePoints <= SupportMethodsForNumber03_6.TargetCount) Pl1ProgresBar.Value = SupportMethodsForNumber03_6.PlayerOnePoints;
             Pl1Score.Text = $"{SupportMethodsForNumber03_6.PlayerOnePoints}";
             if (SupportMethodsForNumber03_6.PlayerOnePoints > SupportMethodsForNumber03_6.TargetCount)
             {

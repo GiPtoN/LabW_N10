@@ -6,6 +6,11 @@ using System.Windows.Forms;
 
 namespace LabW_N10
 {
+    public struct Pointsw
+    {
+        public double kf;
+        public List<double[]> Points;
+    }
     internal static class Program
     {
         [STAThread]
@@ -19,8 +24,9 @@ namespace LabW_N10
     public class SupportMethods
     {
         static public int NumberGraphicsForLevel2 = 0;
-        public static List<double[]> ReturnPoints(int Number)
+        public static Pointsw ReturnPoints(int Number)
         {
+            var points = new Pointsw();
             List<double[]> Points = new List<double[]>();
             double a, b;
             int n;
@@ -37,7 +43,9 @@ namespace LabW_N10
                         point[1] = (2 * Math.Sin(i) + Math.Sin(2 * i))*15;
                         Points.Add(point);
                     }
-                    break;
+                    points.kf = 15;
+                    points.Points = Points;
+                    break; 
                 case 2:
                     a = 0.0;
                     b = 3 * Math.PI;
@@ -49,6 +57,8 @@ namespace LabW_N10
                         point[1] = (i * Math.Sin(i)*5);
                         Points.Add(point);
                     }
+                    points.kf = 5;
+                    points.Points = Points;
                     break;
                 case 3:
                     a = -2 * Math.PI;
@@ -61,6 +71,8 @@ namespace LabW_N10
                         point[1] = (float)((Math.Sin(i) + 0.5 * i * i))*5;
                         Points.Add(point);
                     }
+                    points.kf = 5;
+                    points.Points = Points;
                     break;
                 case 4:
                     a = 0.0;
@@ -69,10 +81,12 @@ namespace LabW_N10
                     for (double i = (b-a)/n; i < b; i+=(b-a)/n)
                     {
                         double[] point = new Double[2];
-                        point[0] = (float)i*5;
-                        point[1] = (float)(3 * Math.Sin(i) / i)*5;
+                        point[0] = (float)i*4;
+                        point[1] = (float)(3 * Math.Sin(i) / i)*4;
                         Points.Add(point);
                     }
+                    points.kf = 4;
+                    points.Points = Points;
                     break;
                 case 5:
                     a = -10.0;
@@ -85,6 +99,8 @@ namespace LabW_N10
                         point[1] = (float)(i*i - 18*i+72);
                         Points.Add(point);
                     }
+                    points.kf = 0;
+                    points.Points = Points;
                     break;
                 case 6:
                     a = 1.0;
@@ -93,10 +109,12 @@ namespace LabW_N10
                     for (double i = a; i <= b; i+=(b-a)/n)
                     {
                         double[] point = new Double[2];
-                        point[0] = (float)i;
-                        point[1] = (float)(i * i * i + 5 * i * i + 14 * i);
+                        point[0] = (float)i*0.5;
+                        point[1] = (float)(i * i * i + 5 * i * i + 14 * i)*0.5;
                         Points.Add(point);
                     }
+                    points.kf = 0.5;
+                    points.Points = Points;
                     break;
                 case 7:
                     a = 0.5;
@@ -109,9 +127,12 @@ namespace LabW_N10
                         point[1] = (float)(Math.Sqrt(i+1)-1.0/i)*30;
                         Points.Add(point);
                     }
+                    points.kf = 30;
+                    points.Points = Points;
                     break;
             }
-            return Points; 
+            
+            return points; 
 
         }
         

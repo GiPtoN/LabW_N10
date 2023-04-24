@@ -32,6 +32,8 @@ namespace LabW_N10
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
+            this.X = new System.Windows.Forms.Label();
+            this.Y = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -44,11 +46,32 @@ namespace LabW_N10
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // X
+            // 
+            this.X.Location = new System.Drawing.Point(279, 9);
+            this.X.Name = "X";
+            this.X.Size = new System.Drawing.Size(20, 23);
+            this.X.TabIndex = 1;
+            this.X.Text = "X";
+            this.X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.X.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Y
+            // 
+            this.Y.Location = new System.Drawing.Point(552, 272);
+            this.Y.Name = "Y";
+            this.Y.Size = new System.Drawing.Size(20, 23);
+            this.Y.TabIndex = 2;
+            this.Y.Text = "Y";
+            this.Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form02_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.Y);
+            this.Controls.Add(this.X);
             this.Controls.Add(this.button1);
             this.Name = "Form02_01";
             this.Text = "Form02_01";
@@ -56,6 +79,10 @@ namespace LabW_N10
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form02_01_Paint);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label Y;
+
+        private System.Windows.Forms.Label X;
 
         private System.Windows.Forms.Button button1;
 
