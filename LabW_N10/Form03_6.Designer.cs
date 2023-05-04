@@ -252,8 +252,8 @@ namespace LabW_N10
         private System.Windows.Forms.Label TargetScoreLable;
 
         private System.Windows.Forms.GroupBox GameGroupBox;
-        public System.Windows.Forms.Label Pl2Score;
-        public System.Windows.Forms.Label Pl1Score;
+        private System.Windows.Forms.Label Pl2Score;
+        private System.Windows.Forms.Label Pl1Score;
         private System.Windows.Forms.Label ScoreLabel;
         private System.Windows.Forms.Label Player2Lable;
         private System.Windows.Forms.Label Player1Lable;

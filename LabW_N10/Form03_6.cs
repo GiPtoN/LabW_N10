@@ -1,6 +1,4 @@
 using System;
-using System.Drawing;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace LabW_N10
@@ -27,7 +25,6 @@ namespace LabW_N10
             MainForm.Show();
             this.Close();
         }
-
         private void SetNumbersButton_Click(object sender, EventArgs e)
         {
             GameSettings.SetGameSettings
@@ -37,22 +34,18 @@ namespace LabW_N10
                 int.Parse(TargetScoreBox.Text)
                 );
         }
-
         private void StartNewGameButton_Click(object sender, EventArgs e)
         {
             GameSettings.StartNewGame(ref Players, this);
         }
-
         private void GetMoreButton_Click(object sender, EventArgs e)
         {
             GameSettings.GetMorePoint(ref Players, this);
         }
-
         private void StopButton_Click(object sender, EventArgs e)
         {
             GameSettings.EndGame(ref Players, this);
         }
-
         public void SetPlScore(int number, int value)
         {
             switch (number)
@@ -105,8 +98,8 @@ namespace LabW_N10
         public void StartNewGame(ref PlayerPoint Players, Form03_6 form)
         {
             Players.SetZero();
-            form.Pl1Score.Text= "0";
-            form.Pl2Score.Text= "0";
+            form.SetPlScore(1,0);
+            form.SetPlScore(2,0);
         }
         public void GameEnded(bool status, ref PlayerPoint player, Form03_6 form)
         {
