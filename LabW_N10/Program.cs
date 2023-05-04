@@ -18,7 +18,7 @@ namespace LabW_N10
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form03_6());
+            Application.Run(new MainForm());
         }
     }
     public class SupportMethods

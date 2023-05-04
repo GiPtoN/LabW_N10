@@ -50,7 +50,7 @@ namespace LabW_N10
             SupportMethods.NumberGraphicsForLevel2 = int.Parse(comboBox1.SelectedItem.ToString());
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        public void button4_Click(object sender, EventArgs e)
         {
             Form form0306 = new Form03_6(); 
             form0306.StartPosition = FormStartPosition.Manual; 
