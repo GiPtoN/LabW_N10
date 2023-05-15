@@ -35,9 +35,7 @@ namespace LabW_N10
             SolidBrush drawBrush = new SolidBrush(Color.Black);
             StringFormat drawFormat = new StringFormat();
 
-            graphics.DrawEllipse(new Pen(Color.Green, 8f), 0, -((float)MaxIndY),1,1);
             graphics.DrawString($"{((int)(MaxIndY / Points.kf))}", drawFont, drawBrush, (float)5, -((float)MaxIndY), drawFormat);
-            graphics.DrawEllipse(new Pen(Color.Green, 8f), (float)MaxIndX*5, (float)5,1,1);
             graphics.DrawString($"{((int)(MaxIndX / Points.kf))}", drawFont, drawBrush, (float)MaxIndX*5, 0, drawFormat);
 
 
